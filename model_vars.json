@@ -1,0 +1,26 @@
+[
+  {
+    "model_name": "Client",
+    "required_vars" : ["name"],
+    "admissible_vars" : ["_id", "name", "billing_address", "mail_address", "credit_cards", "register_date", "last_access_date"],
+    "geoJSON_vars" : ["mail_address"]
+  },
+  {
+    "model_name": "Product",
+    "required_vars" : ["name"],
+    "admissible_vars" : ["_id", "name", "product_code", "price", "price_with_taxes", "shipment_cost", "discount", "dimensions", "weight", "suppliers"],
+    "geoJSON_vars" : []
+  },
+  {
+    "model_name": "Purchase",
+    "required_vars" : ["products", "client", "purchase_date"],
+    "admissible_vars" : ["_id", "products", "client", "price", "purchase_date", "mail_address"],
+    "geoJSON_vars" : ["mail_address"]
+  },
+  {
+    "model_name": "Suplier",
+    "required_vars" : ["name", "warehouse_address"],
+    "admissible_vars" : ["_id", "name", "warehouse_address"],
+    "geoJSON_vars" : ["warehouse_address"]
+  }
+]
